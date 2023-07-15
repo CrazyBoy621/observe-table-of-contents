@@ -1,0 +1,49 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #0a1929;
+    font-family: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
+        "Segoe UI Emoji", "Segoe UI Symbol";
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: white;
+}
+
+section {
+    max-width: 300px !important;
+    padding: 16px;
+}
+
+.table-of-contents {
+    position: fixed;
+    right: 0;
+    top: 0;
+    padding: 16px 50px;
+}
+
+.table-of-contents li {
+    list-style: none;
+}
+
+.table-of-contents a {
+    color: rgb(160, 170, 180);
+    text-decoration: none;
+    transition: 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.table-of-contents a:hover {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.content.active a {
+    color: rgb(102, 178, 255);
+}
+
+.content.active:hover > a {
+    color: rgb(0, 114, 229);
+}
