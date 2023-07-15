@@ -8,10 +8,12 @@ let intersectingIdList = [];
 // Store sequence of all sections ids
 let allSequenceIds = [];
 
+// PUSH all section ids
 allSections.forEach((sectionElement) => {
     allSequenceIds.push(sectionElement.id);
 });
 
+// Observe element that at least 10% visible
 const observeElement = (element) => {
     const obsCallback = function (entries, observer) {
         entries.forEach((entry) => {
@@ -44,6 +46,7 @@ const observeElement = (element) => {
     observer.observe(element);
 };
 
+// Start observing all section elements
 allSections.forEach((section) => {
     observeElement(section);
 });
@@ -58,6 +61,7 @@ function setActiveContent(id) {
     });
 }
 
+// Handle click of anchor tags
 allAnchorTags.forEach((element) => {
     element.addEventListener("click", (e) => {
         e.preventDefault();
